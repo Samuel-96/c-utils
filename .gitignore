@@ -1,3 +1,41 @@
-*.txt
+# Compiled binaries
 *.exe
-*.as
+*.out
+*.o
+*.obj
+*.dll
+*.so
+*.a
+*.lib
+
+# Debug symbols and profiling
+*.pdb
+*.ilk
+*.prof
+*.gcda
+*.gcno
+
+# Temporary and backup files
+*.tmp
+*.bak
+*~
+*.swp
+*.swo
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Build directories
+build/
+bin/
+obj/
+
+# Test outputs and generated files
+test_nocomment.c
+*.txt

@@ -1,12 +1,10 @@
+#include "../include/utils.h"
 #include <stdio.h>
 #include <stdbool.h>
 
-bool check_args(int argc, char* argv[]);
-
 int main(int argc, char* argv[])
 {
-
-    if (!check_args(argc, argv))
+    if (!check_args(argc, argv, 2, "Usage: my_cat.exe <path_to_file>."))
     {
         return 1;
     }
@@ -21,6 +19,8 @@ int main(int argc, char* argv[])
 
     char buffer[1024];
     size_t bytes_read = 0;
+
+    // Read bytes from file and write them to stdout.
 
     while ( (bytes_read = fread(buffer, sizeof(char), sizeof(buffer), f)) != 0 )
     {
@@ -46,15 +46,4 @@ int main(int argc, char* argv[])
     }
 
     return 0;
-}
-
-bool check_args(int argc, char* argv[])
-{
-    if (argc != 2)
-    {
-        fprintf(stderr, "Wrong number of arguments. Use: my_cat.exe <path to file>\n");
-        return false;
-    }
-
-    return true;
 }
