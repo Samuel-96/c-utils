@@ -4,7 +4,7 @@
 
 int main(int argc, char* argv[])
 {
-    if (!check_args(argc, argv, 3, "Usage: my_cp.exe <file_to_copy> <new_file>"))
+    if (!check_args(argc, 3, "Usage: my_cp.exe <file_to_copy> <new_file>"))
     {
         return 1;
     }

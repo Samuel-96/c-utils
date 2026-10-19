@@ -7,7 +7,7 @@
 
 #define BUFFER_SIZE 2048
 
-bool check_args(int argc, char* argv[], int args_to_check, const char* usage_message)
+bool check_args(int argc, int args_to_check, const char* usage_message)
 {
     if (argc != args_to_check)
     {
@@ -116,4 +116,12 @@ int arefiles_equal(const char* path_source, const char* path_destination)
     }
 
     return 1;
+}
+
+void append_star(char* s, const char* c)
+{
+    size_t tam = strlen(s);
+    s[tam] = c[0];
+    s[tam + 1] = c[1];
+    s[tam + 2] = '\0';
 }

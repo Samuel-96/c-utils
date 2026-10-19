@@ -4,7 +4,7 @@
 
 int main(int argc, char* argv[])
 {
-    if (!check_args(argc, argv, 2, "Usage: my_cat.exe <path_to_file>."))
+    if (!check_args(argc, 2, "Usage: my_cat.exe <path_to_file>."))
     {
         return 1;
     }
