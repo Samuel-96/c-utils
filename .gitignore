@@ -35,6 +35,8 @@ Desktop.ini
 build/
 bin/
 obj/
+out/ 
+test/ 
 
 # Test outputs and generated files
 test_nocomment.c

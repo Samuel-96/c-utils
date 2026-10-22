@@ -3,7 +3,6 @@
 #include <windows.h>
 #include <string.h>
 
-
 void print_header(char* path);
 
 int main(int argc, char* argv[])
